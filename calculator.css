@@ -1,0 +1,171 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(0deg, rgba(40,42,42,1) 0%, rgba(31,30,29,1) 100%);
+    overflow: hidden;
+}
+*{
+    font-family: 'Oswald', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+.main{
+    max-width: 100vw;
+    height: 100vh;
+    /* border: 1px solid blue; */
+    color: white;
+}
+
+.main .left-section{
+    width: 75%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+.main .right-section{
+    width: 25%;
+    height: 100%;
+    /* border: 1px solid red; */
+
+}
+.main .left-section, .right-section{
+    float: left;
+}
+
+.main .left-section .calc-screen{
+    width: 100%;
+    /* border: 1px solid greenyellow; */
+    height: 36%;
+}
+
+.main .left-section .calc-screen input{
+    border-color: white;
+    width: 99%;
+    height: 27%;
+    margin-top: 10px;
+    text-align: right;
+    font-size: 40px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-bottom: 1px solid gray;
+    font-weight: 600;
+}
+
+
+
+.main .left-section .calc-btn{
+    width: 100%;
+    height: 64%;
+}
+
+.main .left-section .calc-btn .cal-btn-row{
+    width: 100%;
+    height: 20%;
+    /* border: 1px solid red; */
+}
+
+.main .left-section .calc-btn .cal-btn-row button{
+    height: 100%;
+    width: 25%;
+    border-color: gray;
+    font-size: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    color: whitesmoke;
+}
+
+.title{
+    padding: 10px 5px;
+    font-size: 20px;
+}
+
+/* button styling */
+button,span,i {
+    background: transparent ;
+    text-decoration: none;
+    
+}
+
+/*Button hover state*/
+.bg-black{
+    background-color: black;
+}
+button:hover{
+    background-color: gray;
+    transition: all 0.5s ease-out;
+}
+
+#solve-btn{
+    background-color: #1569C7;
+}
+
+#solve-btn:hover{
+    color: white;
+    background-color: #00BFFF;
+    transition: all 0.5s ease-out;
+}
+i{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.main .right-section .top{
+    width: 100%;
+    height: 10%;
+    padding: 10px 20px;
+}
+
+.main .right-section .history-content-box{
+    width: 97%;
+    height: 75%;
+    /* border: 1px solid red;   */
+    overflow-y: scroll;
+    padding-left: 10px;
+    font-size: 28px;    
+
+}
+.main .right-section .bottom{
+    width: 100%;
+    height:8%;
+    padding-top: 25px;
+    text-align: center;
+    /* border: 1px solid gainsboro; */
+}
+
+.his{
+    border: 1px solid white;
+    padding-left: 6px;
+}
+#sub-input{
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+
+        .left-section, .right-section{
+            display: inline-block !important;
+            width: 100% !important;
+        }
+
+        /* .main .left-section{
+
+        }
+        #history .his{
+
+        }
+        .main .right-section .history-content-box {
+
+        }
+        .main .right-section {
+        }
+
+        .main .right-section .bottom {
+            width: 99%;
+            border: 1px solid gainsboro;
+        } */
+    
+}

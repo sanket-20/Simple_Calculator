@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="calculator.css">
+    <script src="https://kit.fontawesome.com/c924cbf80f.js" crossorigin="anonymous"></script>
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <div class="main">
+        <div class="left-section">
+            <div class="calc-screen">
+                <div class="title">Calculator(Standard)</div>
+                <input type="text" disabled id="sub-input" value="">
+                <input type="text" id="main-input" value="0">
+            </div>
+
+            <div class="calc-btn">
+                <div class="cal-btn-row">
+                    <button type="button" onclick="getValue('%')">%</button><button onclick="clearAll()">C</button><button><i class="fas fa-backspace"></i></button><button onclick="getValue('/')"><span>&#247;</span></button>
+                </div>
+                <div class="cal-btn-row">
+                    <button class="bg-black" onclick="getValue('7')">7</button><button class="bg-black" onclick="getValue('8')">8</button><button class="bg-black" onclick="getValue('9')">9</button><button onclick="getValue('*')">x</button>
+                </div>
+                <div class="cal-btn-row">
+                    <button class="bg-black" onclick="getValue('4')">4</button><button class="bg-black" onclick="getValue('5')">5</button><button class="bg-black" onclick="getValue('6')">6</button><button onclick="getValue('-')">-</button>
+                </div>
+                <div class="cal-btn-row">
+                    <button class="bg-black" onclick="getValue('1')">1</button><button class="bg-black" onclick="getValue('2')">2</button><button class="bg-black" onclick="getValue('3')">3</button><button onclick="getValue('+')">+</button>
+                </div>
+                <div class="cal-btn-row cal-btn-last-row">
+                    <button class="bg-black" title="History"> <a href="#right"><i class="fas fa-history"></i></a></button><button class="bg-black" onclick="getValue('0')">0</button><button class="bg-black" onclick="getValue('.')">.</button><button id="solve-btn" onclick="solve()">=</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-section" id="right">
+            <div class="top">
+                <h2>History</h2>
+            </div>
+            <div class="history-content-box">
+                <div id="history">
+    
+                </div>
+            </div>
+            <div class="bottom" onclick="clearHistory()">
+                <i class="fas fa-trash-alt"></i>
+            </div>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
