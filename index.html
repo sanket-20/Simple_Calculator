@@ -22,7 +22,7 @@
 
             <div class="calc-btn">
                 <div class="cal-btn-row">
-                    <button type="button" onclick="getValue('%')">%</button><button onclick="clearAll()">C</button><button><i class="fas fa-backspace"></i></button><button onclick="getValue('/')"><span>&#247;</span></button>
+                    <button type="button" onclick="getValue('%')">%</button><button onclick="clearAll()">C</button><button onclick="removeLastNum()"><i class="fas fa-backspace"></i></button><button onclick="getValue('/')"><span>&#247;</span></button>
                 </div>
                 <div class="cal-btn-row">
                     <button class="bg-black" onclick="getValue('7')">7</button><button class="bg-black" onclick="getValue('8')">8</button><button class="bg-black" onclick="getValue('9')">9</button><button onclick="getValue('*')">x</button>
@@ -34,7 +34,7 @@
                     <button class="bg-black" onclick="getValue('1')">1</button><button class="bg-black" onclick="getValue('2')">2</button><button class="bg-black" onclick="getValue('3')">3</button><button onclick="getValue('+')">+</button>
                 </div>
                 <div class="cal-btn-row cal-btn-last-row">
-                    <button class="bg-black" title="History"> <a href="#right"><i class="fas fa-history"></i></a></button><button class="bg-black" onclick="getValue('0')">0</button><button class="bg-black" onclick="getValue('.')">.</button><button id="solve-btn" onclick="solve()">=</button>
+                    <button class="bg-black" title="History" onclick="hideHistoryBox()"> <a href="#right"><i class="fas fa-history"></i></a></button><button class="bg-black" onclick="getValue('0')">0</button><button class="bg-black" onclick="getValue('.')">.</button><button id="solve-btn" onclick="solve()">=</button>
                 </div>
             </div>
         </div>
