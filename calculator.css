@@ -28,6 +28,7 @@ html{
     width: 25%;
     height: 100%;
     /* border: 1px solid red; */
+    visibility: hidden;
 
 }
 .main .left-section, .right-section{
@@ -89,7 +90,7 @@ button,span,i {
     
 }
 
-/*Button hover state*/
+/Button hover state/
 .bg-black{
     background-color: black;
 }
@@ -138,11 +139,18 @@ i{
 
 .his{
     border: 1px solid white;
-    padding-left: 6px;
+    padding-left: 8px;
+}
+.his i{
+    margin: 10px ;
+    cursor: pointer;
+    display: inline-block;
 }
 #sub-input{
     font-size: 30px;
 }
+
+
 
 @media only screen and (max-width: 768px) {
 
@@ -150,22 +158,4 @@ i{
             display: inline-block !important;
             width: 100% !important;
         }
-
-        /* .main .left-section{
-
-        }
-        #history .his{
-
-        }
-        .main .right-section .history-content-box {
-
-        }
-        .main .right-section {
-        }
-
-        .main .right-section .bottom {
-            width: 99%;
-            border: 1px solid gainsboro;
-        } */
-    
 }
