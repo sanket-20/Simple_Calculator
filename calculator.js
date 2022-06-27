@@ -19,6 +19,21 @@ function clearAll(){
     subInputBox.value = '';
 }
 
+function removeLastNum(){
+    if(inputVal.value != '')
+    {
+        if(inputVal.value.length > 1)
+            inputVal.value = inputVal.value.slice(0,-1);
+        else{
+            inputVal.value = inputVal.value.slice(0,-1);
+            inputVal.value = "0";
+        }
+    }  
+    else{
+        inputVal.value = "0";
+    }
+
+}
 
 function solve(){
     if(inputVal.value != '0'){
@@ -37,7 +52,7 @@ function solve(){
 function showHistory(){
     var history='<div>';
     for(let i=0; i< subInput.length; i++){
-        history += "<div class='his'><p>"+ subInput[i] + " = "+"</p><p>"+ mainInput[i]+"</p></div>";
+        history += "<div class='his'><i class='fas fa-arrow-alt-circle-left' id="+i+"></i><p>"+ subInput[i] + " = "+"</p><p>"+ mainInput[i]+"</p></div>";
     }
     history += "</div>";
     historyDiv.innerHTML = history;
@@ -52,3 +67,23 @@ function clearHistory(){
             subInput=[];
         }
 }
+
+
+tem=1;
+function hideHistoryBox(){
+    if(tem%2==1){
+        document.querySelector('.right-section').style.visibility="visible";
+    }
+    else{
+        document.querySelector('.right-section').style.visibility="visiblehidden";
+    }
+    tem+=1;
+}
+
+
+document.querySelector('#history').addEventListener('click', function(e){
+    // console.log(e.target.id);
+    // console.log(e.target);
+    subInputBox.value = subInput[e.target.id] + " = ";
+    inputVal.value = mainInput[e.target.id];
+});
