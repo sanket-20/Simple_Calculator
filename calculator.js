@@ -62,9 +62,15 @@ function showHistory(){
 function clearHistory(){
         if(mainInput.length != 0){
             const res = confirm('Are You Sure Want To  Delete History ?');
-            historyDiv.innerHTML="";
-            mainInput=[];
-            subInput=[];
+            if(res === "true")
+            {
+                historyDiv.innerHTML="";
+                mainInput=[];
+                subInput=[];
+            }
+//             historyDiv.innerHTML="";
+//             mainInput=[];
+//             subInput=[];
         }
 }
 
