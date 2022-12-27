@@ -62,7 +62,7 @@ function showHistory(){
 function clearHistory(){
         if(mainInput.length != 0){
             const res = confirm('Are You Sure Want To  Delete History ?');
-            if(res == "true")
+            if(res == true)
             {
                 historyDiv.innerHTML="";
                 mainInput=[];
