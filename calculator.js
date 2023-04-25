@@ -2,6 +2,7 @@ inputVal = document.querySelector('#main-input');
 subInputBox = document.querySelector('#sub-input');
 historyDiv = document.querySelector('#history');
 mainInput=[],  subInput=[];
+var toggleIndex = 1;
 function getValue(e){
     // alert("hi");
     if(inputVal.value == "0"){
@@ -88,10 +89,31 @@ function hideHistoryBox(){
     tem+=1;
 }
 
+function toggleMode(){
+    if(toggleIndex%2==1){
+        document.querySelector('#mode').innerText = "Dark Mode";
+        document.querySelector('#mode').style.color = "black";
 
+        // inputVal.style.color = "black";
+        // subInputBox.style.color = "black";
+        // historyDiv.style.color = "black";
+    }
+    else{
+        document.querySelector('#mode').innerText = "Light Mode";
+        document.querySelector('#mode').style.color = "white";
+
+        // inputVal.style.color = "white";
+        // subInputBox.style.color = "white";
+        // historyDiv.style.color = "white";
+    }
+    toggleIndex+=1;
+    
+}
 document.querySelector('#history').addEventListener('click', function(e){
     // console.log(e.target.id);
     // console.log(e.target);
     subInputBox.value = subInput[e.target.id] + " = ";
     inputVal.value = mainInput[e.target.id];
 });
+
+
