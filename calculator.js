@@ -50,6 +50,8 @@ function solve(){
 }
 
 function showHistory(){
+    mainInput.reverse();
+    subInput.reverse();
     var history='<div>';
     for(let i=0; i< subInput.length; i++){
         history += "<div class='his'><i class='fas fa-arrow-alt-circle-left' id="+i+"></i><p>"+ subInput[i] + " = "+"</p><p>"+ mainInput[i]+"</p></div>";
