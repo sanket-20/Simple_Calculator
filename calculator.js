@@ -18,12 +18,18 @@ function getValue(e){
 
 let get_opretor = (num)=>{
     if(inputVal.value!='0'){
-        if(inputVal.value.charAt(inputVal.value.length - 1)=='+'||inputVal.value.charAt(inputVal.value.length - 1)=='-'||inputVal.value.charAt(inputVal.value.length - 1)=='*'||inputVal.value.charAt(inputVal.value.length - 1)=='/')
+        if(inputVal.value.charAt(inputVal.value.length - 1)=='+'||inputVal.value.charAt(inputVal.value.length - 1)=='*'||inputVal.value.charAt(inputVal.value.length - 1)=='/')
         {
          inputVal.value = inputVal.value.slice(0,-1) + num;
         }
         else{
+            // if(||inputVal.value.charAt(inputVal.value.length - 1)=='-')
             inputVal.value+=num;
+        }
+    }
+    else{
+        if(num=='-'){
+            inputVal.value='-';
         }
     }
 }
