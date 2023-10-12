@@ -20,8 +20,7 @@ let get_opretor = (num)=>{
     if(inputVal.value!='0'){
         if(inputVal.value.charAt(inputVal.value.length - 1)=='+'||inputVal.value.charAt(inputVal.value.length - 1)=='-'||inputVal.value.charAt(inputVal.value.length - 1)=='*'||inputVal.value.charAt(inputVal.value.length - 1)=='/')
         {
-         let dummy=inputVal.value.slice(0,-1);
-         inputVal.value = dummy + num;
+         inputVal.value = inputVal.value.slice(0,-1) + num;
         }
         else{
             inputVal.value+=num;
