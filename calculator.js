@@ -5,13 +5,27 @@ mainInput=[],  subInput=[];
 var toggleIndex = 1;
 function getValue(e){
     // alert("hi");
-    if(inputVal.value == "0"){
+    if(inputVal.value == "0")
+    {
         // console.log('true');
         inputVal.value = e;
-
     }
     else{
-        inputVal.value += e;
+            inputVal.value += e;
+            console.log(inputVal.value);
+        }
+}
+
+let get_opretor = (num)=>{
+    if(inputVal.value!='0'){
+        if(inputVal.value.charAt(inputVal.value.length - 1)=='+'||inputVal.value.charAt(inputVal.value.length - 1)=='-'||inputVal.value.charAt(inputVal.value.length - 1)=='*'||inputVal.value.charAt(inputVal.value.length - 1)=='/')
+        {
+         let dummy=inputVal.value.slice(0,-1);
+         inputVal.value = dummy + num;
+        }
+        else{
+            inputVal.value+=num;
+        }
     }
 }
 
@@ -117,3 +131,10 @@ document.querySelector('#history').addEventListener('click', function(e){
 });
 
 
+// if('+'|| '-'|| '*' == '-')
+// { 
+//     console.log(true)
+// }
+// else{
+//     console.log(false)
+// }
