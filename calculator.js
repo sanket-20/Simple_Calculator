@@ -59,7 +59,7 @@ function removeLastNum(){
 }
 
 
-function percent()
+function percent(this)
 {
     if(opt == '+'|| opt=='-')
     {
