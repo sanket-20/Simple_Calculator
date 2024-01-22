@@ -1,7 +1,10 @@
-inputVal = document.querySelector('#main-input');
-subInputBox = document.querySelector('#sub-input');
-historyDiv = document.querySelector('#history');
+const inputVal = document.querySelector('#main-input');
+const subInputBox = document.querySelector('#sub-input');
+const historyDiv = document.querySelector('#history');
 mainInput=[],  subInput=[];
+let opt;
+let percentage;
+
 var toggleIndex = 1;
 function getValue(e){
     // alert("hi");
@@ -23,7 +26,7 @@ let get_opretor = (num)=>{
          inputVal.value = inputVal.value.slice(0,-1) + num;
         }
         else{
-            // if(||inputVal.value.charAt(inputVal.value.length - 1)=='-')
+            if(inputVal.value.charAt(inputVal.value.length - 1)!='-')
             inputVal.value+=num;
         }
     }
@@ -32,6 +35,7 @@ let get_opretor = (num)=>{
             inputVal.value='-';
         }
     }
+    opt = num;
 }
 
 function clearAll(){
@@ -52,8 +56,21 @@ function removeLastNum(){
     else{
         inputVal.value = "0";
     }
-
 }
+
+
+function percent()
+{
+    if(opt == '+'|| opt=='-')
+    {
+        equation = inputVal.value;
+        let arr = equation.split(opt);
+        percentage = (arr[0]*arr[1])/100; 
+        console.log(percentage);
+        inputVal.value = arr[0]+opt+percentage;   
+     }
+}
+
 
 function solve(){
     if(inputVal.value != '0'){
@@ -128,6 +145,9 @@ function toggleMode(){
     toggleIndex+=1;
     
 }
+
+
+
 document.querySelector('#history').addEventListener('click', function(e){
     // console.log(e.target.id);
     // console.log(e.target);
@@ -135,11 +155,3 @@ document.querySelector('#history').addEventListener('click', function(e){
     inputVal.value = mainInput[e.target.id];
 });
 
-
-// if('+'|| '-'|| '*' == '-')
-// { 
-//     console.log(true)
-// }
-// else{
-//     console.log(false)
-// }
